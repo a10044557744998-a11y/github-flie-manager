@@ -2,10 +2,10 @@
 export const websiteConfig = {
   // 网站基本信息
   site: {
-    title: "晚晚服",
-    description: "欢迎来到晚晚服，探索无限可能的方块世界！",
-    keywords: "Minecraft,服务器,我的世界,Java版,生存,创造,生电",
-    author: "晚晚服",
+    title: "Qingserver",
+    description: "欢迎来到Qingserver,探索无限可能的方块世界!",
+    keywords: "Minecraft,服务器,我的世界,Java版,生存,插件,生电",
+    author: "Qingserver",
     language: "zh-CN"
   },
 
@@ -24,7 +24,7 @@ export const websiteConfig = {
         pageTitle: {
           // 主标题配置（支持打字机效果）
           mainTitle: {
-            texts: ["欢迎来到 晚晚服", "Welcome to DuskCraft"], // 多语言标题数组
+            texts: ["欢迎来到 Qingserver", "Welcome to Qingserver"], // 多语言标题数组
             typewriter: {
               enabled: true, // 是否启用打字机效果
               speed: 100,    // 打字速度（毫秒）
@@ -40,13 +40,13 @@ export const websiteConfig = {
         name: "相册",
         path: "/gallery",
         icon: "mdi-image",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["游戏相册", "DCS Game Gallery"],
+            texts: ["游戏相册", "Qing Game Gallery"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -61,13 +61,13 @@ export const websiteConfig = {
         name: "历程",
         path: "/history",
         icon: "mdi-history",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["晚晚服服历程", "DCS History"],
+            texts: ["qingserver历程", "Qingserver History"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -82,13 +82,13 @@ export const websiteConfig = {
         name: "排行榜",
         path: "/leaderboard",
         icon: "mdi-trophy",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["玩家排行榜", "DCS Leaderboard"],
+            texts: ["玩家排行榜", "Qing Leaderboard"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -134,9 +134,6 @@ export const websiteConfig = {
       "/backgrounds/desktopWallpaper_2.webp",
       "/backgrounds/desktopWallpaper_3.webp",
       "/backgrounds/desktopWallpaper_4.webp",
-      "/backgrounds/desktopWallpaper_5.webp",
-      "/backgrounds/desktopWallpaper_6.webp",
-      "/backgrounds/desktopWallpaper_7.webp",
     ],
     defaultImage: "/backgrounds/default.webp"
   },
@@ -174,46 +171,43 @@ export const websiteConfig = {
   theme: {
     // 日间模式颜色
     light: {
-      primary: "#ff8eb7",     // 樱花粉
+      primary: "#5D9C41",     // MC草方块绿
       secondary: "#a6e3e9",   // 薄荷蓝
       accent: "#ffd166",      // 奶油黄
-      background: "#f8f5ff",  // 浅紫色背景
+      background: "#f0f8f0",  // 浅绿调背景
       card: "rgba(255, 255, 255, 0.85)",
-      text: "#5a4b81",       // 深紫色文字
+      text: "#2c442e",       // 适配绿色的深文字
       glass: "rgba(255, 255, 255, 0.35)"
     },
     // 夜间模式颜色
     dark: {
-      primary: "#ff8eb7",     // 樱花粉
+      primary: "#5D9C41",     // MC草方块绿
       secondary: "#a6e3e9",   // 薄荷蓝
       accent: "#ffd166",      // 奶油黄
-      background: "#1a1a2e",  // 深蓝背景
-      card: "rgba(30, 30, 46, 0.85)",
-      text: "#cdd6f4",       // 浅色文字
-      glass: "rgba(30, 30, 46, 0.35)"
+      background: "#1a291e",  // 暗绿深色背景
+      card: "rgba(26, 41, 30, 0.85)",
+      text: "#c7e8cc",       // 浅色文字
+      glass: "rgba(26, 41, 30, 0.35)"
     }
   },
 
   // 服务器配置
   server: {
     // 页面显示的服务器地址
-    displayAddress: "w-6.cc",
+    displayAddress: "qingserver.dpdns.org",
     // API请求使用的服务器地址（可以不同）
-    apiAddress: "ipv4.w-6.cc",
-    port: "25565",
-    version: "1.21.4",
+    apiAddress: "play.simpfun.cn",
+    port: "40353",
+    version: "1.21.8",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java",
   },
 
   // 页脚配置
   footer: {
-    copyright: "© 2022-2026 晚晚服保留所有权利.",
-    customHtml: `
-      <!-- 在这里插入自定义HTML代码，比如备案信息 -->
-      <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div>
-    `
-  },
+    copyright: "Qingserver_MC",
+    
 
+  },
   // 排行榜配置
   leaderboard: {
     // 本地JSON文件配置
@@ -329,11 +323,11 @@ export const websiteConfig = {
         title: "服务器信息",
         icon: "information",
         items: [
-          { label: "服务器类别", value: "物理机" },
-          { label: "CPU", value: "i9-13900kf" },
-          { label: "内存", value: "128GB DDR5" },  
+          { label: "服务器类别", value: "第三方:简幻欢" },
+          { label: "CPU", value: "C+ E5-2682v4 4核" },
+          { label: "内存", value: "16G" },  
           { label: "类型", value: "生存，生电，建筑" },
-          { label: "最大玩家", value: "100人" },
+          { label: "最大玩家", value: "20人" },
           { label: "在线时间", value: "7X24小时" }
         ]
       },
@@ -344,12 +338,11 @@ export const websiteConfig = {
         title: "服务器特色",
         icon: "cog",
         items: [
-          { label: "IPV4网络", value: "✓" },
-          { label: "IPV6网络", value: "✓" },
-          { label: "镜像服务器", value: "✓" },
+          { label: "无规则", value: "✓" },
+          { label: "耐玩", value: "✓" },
           { label: "双重备份", value: "✓" },
           { label: "群服互通", value: "✓" },
-          { label: "联机工具提供", value: "✓" }
+          { label: "QQ群交流", value: "✓" }
         ]
       },
       
@@ -359,9 +352,11 @@ export const websiteConfig = {
         title: "管理团队",
         icon: "shield-account",
         items: [
-          { label: "_YUTONG_", value: "腐竹-物理服主！" },
-          { label: "wanwan_jiean", value: "腐竹-技术和主要管理" },
-          { label: "CrazyPastor", value: "腐竹-不务正业" }
+          { label: "Qingserver", value: "腐竹" },
+          { label: "OrneryHalo92514", value: "机器人管理" },
+          { label: "julupengze", value: "技术" },
+          { label: "Asleep_Yuyu", value: "技术" },
+          { label: "xiaoqueqiao", value: "技术" }
         ]
       }
     },
@@ -370,7 +365,7 @@ export const websiteConfig = {
     rules: {
       enabled: true,
       title: "游戏规则",
-      description: "服务器基本规则和玩家行为准则",
+      description: "服务器无规则",
       items: [
         {
           title: "友好相处",
@@ -378,9 +373,9 @@ export const websiteConfig = {
           description: "尊重其他玩家，禁止任何形式的骚扰和歧视行为"
         },
         {
-          title: "禁止作弊",
+          title: "可随意游玩",
           icon: "shield",
-          description: "严禁使用任何作弊客户端或利用游戏漏洞"
+          description: "小心偷家！"
         },
         {
           title: "文明聊天",
@@ -402,7 +397,7 @@ export const websiteConfig = {
           icon: "qqchat",
           buttonText: "加入 QQ 群",
           buttonType: "secondary",
-          url: "https://qm.qq.com/q/mVvrLcbLvU"
+          url: "https://qm.qq.com/q/fbFhOU2tZm"
         },
         {
           title: "邮箱",
@@ -410,7 +405,7 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "mailto:me@wanfory.top"
+          url: "qingserver@yeah.net"
         }
       ]
     },
@@ -432,11 +427,11 @@ export const websiteConfig = {
       
       // 手动成员列表（当dataSource为"manual"时,或未获取到数据时生效）
       manualList: [
-        "EpiphanyEX",
-        "Bu_XiAo_Le",
-        "BIG_windows",
-        "XiaoHongya",
-        "lanbaicai01"
+        "?",
+        "?",
+        "?",
+        "?",
+        "?"
       ]
     }
   },

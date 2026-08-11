@@ -11,7 +11,7 @@
 
 :root {
   /* 日间模式颜色 - 奶油白风格 */
-  --color-primary: #ff8eb7;     /* 樱花粉 */
+  --color-primary: #5D9C41;     /* MC草方块绿 */
   --color-secondary: #a6e3e9;   /* 薄荷蓝 */
   --color-accent: #ffd166;      /* 奶油黄 */
   --color-success: #7befb2;     /* 清新绿 */
@@ -19,11 +19,11 @@
   --color-info: #79c7ff;        /* 天空蓝 */
 
   /* 背景与文字 */
-  --color-bg: #fef7f0;          /* 奶油白背景 */
+  --color-bg: #f0f8f0;          /* 浅绿调奶油背景 */
   --color-card-bg: rgba(255, 255, 255, 0.9);
-  --color-text: #5a4b81;        /* 深紫色文字 */
-  --color-text-light: #887aaa;
-  --color-border: rgba(168, 153, 255, 0.2);
+  --color-text: #2c442e;        /* 适配绿色的深文字 */
+  --color-text-light: #607c62;
+  --color-border: rgba(120, 180, 120, 0.2);
 
   /* 玻璃质感效果 */
   --glass-bg: rgba(255, 255, 255, 0.4);
