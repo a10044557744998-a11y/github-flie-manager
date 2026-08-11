@@ -109,7 +109,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["关于服务器", "About DCServer"],
+            texts: ["关于Qingserver", "About Qingserver"],
             typewriter: {
               enabled: true,
               speed: 100,
