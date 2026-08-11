@@ -405,7 +405,7 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "qingserver@yeah.net"
+          url: "mailto:qingserver@yeah.net"
         }
       ]
     },
