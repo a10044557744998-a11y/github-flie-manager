@@ -40,7 +40,7 @@ export const websiteConfig = {
         name: "相册",
         path: "/gallery",
         icon: "mdi-image",
-        enabled: false,
+        enabled: true,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
@@ -134,6 +134,7 @@ export const websiteConfig = {
       "/backgrounds/desktopWallpaper_2.webp",
       "/backgrounds/desktopWallpaper_3.webp",
       "/backgrounds/desktopWallpaper_4.webp",
+      "/backgrounds/desktopWallpaper_5.webp",
     ],
     defaultImage: "/backgrounds/default.webp"
   },
