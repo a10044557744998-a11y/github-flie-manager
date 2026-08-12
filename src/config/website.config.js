@@ -82,7 +82,7 @@ export const websiteConfig = {
         name: "排行榜",
         path: "/leaderboard",
         icon: "mdi-trophy",
-        enabled: false,
+        enabled: true,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
