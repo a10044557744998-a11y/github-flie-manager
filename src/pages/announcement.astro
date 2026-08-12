@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { websiteConfig } from '../config/website.config.js';
+import PageTitle from '../components/PageTitle.astro';
+
+const pageNavItem = websiteConfig.navigation.items.find(item => item.path === "/announcement");
+
+const rawAnnList = websiteConfig.announcementPage?.list ?? [];
+const annList = [
+    ...rawAnnList.filter(i => i.top === true),
+    ...rawAnnList.filter(i => i.top !== true)
+];
+
+const title = pageNavItem?.name ?? "项目公告";
+const description = pageNavItem?.pageTitle?.subtitle ?? "同步QQ群公告，查看项目重要通知与更新";
+---
+
+<Layout {title} {description}>
+    <div class="page-container">
+        <PageTitle pageTitle={pageNavItem?.pageTitle} />
+
+        <main class="page-content">
+            <section class="announcement-section">
+                <div class="announcement-grid">
+                    {annList.length === 0 ? (
+                        <div class="empty-tip card">
+                            <p>暂无公告</p>
+                        </div>
+                    ) : (
+                        annList.map((item, index) => (
+                            <div class="announcement-card card" key={index}>
+                                {item.top && <div class="ann-badge">📌 置顶</div>}
+                                <div class="ann-meta">
+                                    <span class="ann-date">📅 {item.date}</span>
+                                    <span class="ann-author">✍️ {item.author}</span>
+                                </div>
+                                <h3 class="ann-title">{item.title}</h3>
+                                <!-- 如果配置写了image路径，则渲染图片 -->
+                                {item.image && (
+                                    <div class="ann-image-wrap">
+                                        <img src={item.image} alt={item.title} loading="lazy" />
+                                    </div>
+                                )}
+                                <div class="ann-content">
+                                    {item.content.split("\n").map((line) => (
+                                        <p>{line}</p>
+                                    ))}
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
+            </section>
+        </main>
+    </div>
+</Layout>
+
+<style>
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.announcement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 2rem;
+}
+
+.announcement-card {
+    position: relative;
+    transition: transform 0.3s var(--ease-smooth);
+    padding: 1.75rem;
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+}
+
+.ann-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.ann-meta {
+    display: flex;
+    gap:1rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.ann-title {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+.ann-image-wrap {
+    width: 100%;
+    margin-bottom:1rem;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.ann-image-wrap img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.ann-content p {
+    margin: 0.4rem 0;
+    line-height: 1.7;
+    color: var(--color-text-light);
+}
+
+.empty-tip {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        gap: 2rem;
+    }
+    .announcement-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+</style>

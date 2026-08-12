@@ -37,6 +37,27 @@ export const websiteConfig = {
         }
       },
       {
+        name: "公告",
+        path: "/announcement",
+        icon: "mdi-bullhorn",
+        enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
+        pageTitle: {
+          mainTitle: {
+            texts: ["项目公告", "Announcement"],
+            typewriter: {
+              enabled: true,
+              speed: 100,
+              delay: 1000,
+              loop: true
+            }
+          },
+          subtitle: "同步QQ群公告，查看项目重要通知与更新"
+        }
+      },
+      {
         name: "相册",
         path: "/gallery",
         icon: "mdi-image",
@@ -206,9 +227,71 @@ export const websiteConfig = {
   // 页脚配置
   footer: {
     copyright: "Qingserver_MC",
-    
-
   },
+
+  // 公告页面配置
+  announcementPage: {
+    list: [
+      {
+        date: "2026‑08‑11",
+        title: "服务器登录信息",
+        content: "欢迎您来到Qingserver无规则公益服务器官方群聊，下面是各个服务器登录信息\n🎮Java\nJava生存服：\n模式:困难\n服务器ip: qingserver.dpdns.org（版本:1.21.8+，可能不支持26.x）\n🎮基岩\n基岩端地址:play.simpfun.cn\n端口40353\n版本:1.21.8\n🎮\n支持离线账号，人数20\n死亡不掉落\n群里发:绑定[空格]ID即可注册（最多绑定两个）\n群里发:解绑[空格]ID即可解绑\n我在本群的名称设为：QQ名[空格]游戏id\n游戏内聊天加#[内容]可以把消息发送到群里",
+        author: "Qingserver",
+        top: true
+      },
+      {
+        date: "2026‑08‑11",
+        title: "官网上线通知",
+        content: "我们的服务器官网已经搞好了\nhttps://qingserver.dpdns.org/\n每一个月更新一次信息",
+        author: "xiaoqueqiao,qingserver",
+        top: false
+      },
+      {
+        date: "2026‑07‑28",
+        title: "赞助说明",
+        content: "如果你喜欢我们的服务器可以赞助一下呦！\n你的赞助就是我们开服的动力\n赞助方式在群里获取",
+        author: "Qingserver",
+         image: "/assets/announcement/donate.webp",
+        top: false
+      },
+      {
+        date: "2026‑07‑28",
+        title: "插件与常用指令",
+        content: "插件：\neasybot、napcat机器人\n进服注册: 进服输入/register 密码（最低8个数） 确认密码\n离线皮肤:/skins （皮肤虽然不多）\n传送:/tpa 玩家名称 被玩家传送的玩家聊天框选择绿色的英文，即可传送\n苦力怕爆炸修复\n领地:箭矢选择两个点（不管高度，自己控制高度），指令/dom create [领地名字]\n拥有签到插件",
+        author: "Qingserver",
+        top: false
+      },
+      {
+        date: "2026‑07‑22",
+        title: "生存服规则提醒",
+        content: "禁止索要创造，要创造玩创造服去，这是生存服",
+        author: "Qingserver",
+        top: false
+      },
+      {
+        date: "2026‑07‑09",
+        title: "历史存档下载",
+        content: "以前服务器存档下载链接:\nhttps://1837128162.share.123pan.cn/123pan/gygJTd‑fi0fH?pwd=0570#\n密码:0570",
+        author: "Qingserver",
+        top: false
+      },
+      {
+        date: "2026‑07‑03",
+        title: "领地圈地提醒",
+        content: "有领地啊，自觉加领地，被偷我们不负责，但是如果乱闹，加黑两天。如果有乱闹的截图找管理举报（有奖）\n圈地:箭矢选择两个点（不管高度，自己控制高度），在用指令/dom create [领地名字]即可完成!",
+        author: "OrneryHalo92514",
+        top: false
+      },
+      {
+        date: "2026‑04‑23",
+        title: "查看在线玩家指令",
+        content: "cf（在线玩家）\nlist（在线玩家）",
+        author: "Qingserver",
+        top: false
+      }
+    ]
+  },
+
   // 排行榜配置
   leaderboard: {
     // 本地JSON文件配置
@@ -326,7 +409,7 @@ export const websiteConfig = {
         items: [
           { label: "服务器类别", value: "第三方:简幻欢" },
           { label: "CPU", value: "C+ E5-2682v4 4核" },
-          { label: "内存", value: "16G" },  
+          { label: "内存", value: "16G" },
           { label: "类型", value: "生存，生电，建筑" },
           { label: "最大玩家", value: "20人" },
           { label: "在线时间", value: "7X24小时" }
@@ -443,7 +526,7 @@ export const websiteConfig = {
     // 常用图标映射
     mappings: {
       home: "mdi-home",
-      history: "mdi-history", 
+      history: "mdi-history",
       trophy: "mdi-trophy",
       information: "mdi-information",
       music: "mdi-music",
@@ -498,18 +581,23 @@ export const pageTemplates = {
     description: "服务器主页",
     layout: "default"
   },
+  announcement: {
+    title: "公告",
+    description: "服务器公告",
+    layout: "default"
+  },
   gallery: {
     title: "相册",
     description: "服务器相册",
     layout: "default"
   },
   history: {
-    title: "服务器历程", 
+    title: "服务器历程",
     description: "服务器发展历史",
     layout: "default"
   },
   leaderboard: {
-    title: "排行榜",
+    title: "玩家排行榜",
     description: "玩家排行榜",
     layout: "default"
   },
