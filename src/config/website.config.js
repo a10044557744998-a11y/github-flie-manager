@@ -121,27 +121,6 @@ export const websiteConfig = {
         }
       },
       {
-        name: "公告",
-        path: "/announcement",
-        icon: "mdi-star",
-        enabled: true,
-        // 外链配置：如果external为true，则点击跳转到externalUrl
-        external: false, // 是否启用外链模式
-        externalUrl: "", // 外链地址（仅在external为true时生效）
-        pageTitle: {
-          mainTitle: {
-            texts: ["服务器公告", "Qing Announcement"],
-            typewriter: {
-              enabled: true,
-              speed: 100,
-              delay: 1000,
-              loop: true
-            }
-          },
-          subtitle: "看看服务器公告吧，有很多重要的消息哦！"
-        }
-      },
-      {
         name: "关于",
         path: "/about",
         icon: "mdi-information",
