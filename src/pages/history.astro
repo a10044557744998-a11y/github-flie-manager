@@ -27,7 +27,7 @@ const historyData = await getHistoryData(websiteConfig.history);
                 <div class="timeline-date">{item.date}</div>
               </div>
               
-              <!-- 历程内容卡片 -->
+               <!-- 历程内容卡片 -->
               <div class="timeline-content">
                 <div class="history-card">
                   <!-- 图片区域 -->
@@ -45,12 +45,12 @@ const historyData = await getHistoryData(websiteConfig.history);
                       </button>
                     </div>
                   </div>
-                  
+                   
                   <!-- 内容区域 -->
-                  <div class="history-content-info">
+                    <div class="history-content-info">
                     <h3 class="history-item-title">{item.title}</h3>
                     <div class="history-authors">
-                      <span class="authors-label">作者：</span>
+                      <span class="authors-label">作者:</span>
                       {item.authors.map((author, i) => (
                         <span class="author-tag">{author}</span>
                       ))}
